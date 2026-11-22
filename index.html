@@ -1,0 +1,368 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LSY | Digital IC Design Portfolio</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #ffffff;
+      color: #1e293b;
+      line-height: 1.7;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      background: white;
+      border-bottom: 1px solid #e2e8f0;
+      padding: 18px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 10;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    nav a {
+      margin-left: 24px;
+      text-decoration: none;
+      color: #475569;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #2563eb;
+    }
+
+    section {
+      max-width: 1050px;
+      margin: auto;
+      padding: 85px 24px;
+    }
+
+    .hero {
+      padding-top: 120px;
+      padding-bottom: 120px;
+    }
+
+    .subtitle {
+      color: #2563eb;
+      font-weight: bold;
+      font-size: 14px;
+      letter-spacing: 2px;
+    }
+
+    h1 {
+      font-size: clamp(36px, 6vw, 56px);
+      line-height: 1.2;
+      margin: 20px 0;
+    }
+
+    h2 {
+      font-size: 30px;
+      margin-bottom: 30px;
+    }
+
+    h3 {
+      margin-top: 0;
+    }
+
+    p {
+      color: #64748b;
+    }
+
+    .hero p {
+      max-width: 680px;
+      font-size: 18px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 22px;
+      background: #2563eb;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      margin-top: 22px;
+    }
+
+    .button:hover {
+      background: #1d4ed8;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .card {
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 28px;
+      transition: 0.2s;
+    }
+
+    .card:hover {
+      border-color: #2563eb;
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px #0000000a;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #eff6ff;
+      color: #2563eb;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 12px;
+      margin: 4px 4px 4px 0;
+    }
+
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+
+    .skill-box {
+      padding: 24px;
+      background: #f8fafc;
+      border-radius: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 35px;
+      border-top: 1px solid #e2e8f0;
+      color: #94a3b8;
+    }
+
+    @media (max-width: 700px) {
+      header {
+        padding: 16px 5%;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      nav a {
+        margin-left: 12px;
+      }
+
+      .projects,
+      .skills {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 60px 20px;
+      }
+
+      .hero {
+        padding-top: 75px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <div class="logo">LSY.</div>
+
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Home -->
+  <section class="hero">
+    <div class="subtitle">
+      DIGITAL IC DESIGN · RTL · SoC
+    </div>
+
+    <h1>Hi, I'm LSY.</h1>
+
+    <h3>
+      Electrical Engineering Graduate Student
+      at National Cheng Kung University
+    </h3>
+
+    <p>
+      Interested in digital IC design, processor
+      microarchitecture, and SoC integration.
+      Experienced in SystemVerilog RTL design,
+      RISC-V processors, AXI-based memory systems,
+      and hardware verification.
+    </p>
+
+    <a class="button" href="#projects">
+      Explore My Projects
+    </a>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <h2>About Me</h2>
+
+    <p>
+      I am a master's student in Electrical Engineering
+      at National Cheng Kung University (NCKU), Taiwan.
+    </p>
+
+    <p>
+      My technical interests include RTL design,
+      processor architecture, memory subsystems,
+      and system-on-chip integration.
+    </p>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2>Featured Projects</h2>
+
+    <div class="projects">
+
+      <div class="card">
+        <h3>RISC-V 5-Stage Processor</h3>
+
+        <p>
+          Designed and implemented key modules of a
+          pipelined RISC-V processor with data forwarding,
+          hazard detection, and branch prediction.
+        </p>
+
+        <span class="tag">SystemVerilog</span>
+        <span class="tag">RISC-V</span>
+        <span class="tag">Pipeline</span>
+      </div>
+
+      <div class="card">
+        <h3>AXI Memory Subsystem</h3>
+
+        <p>
+          Developed AXI-based memory interfaces,
+          including SRAM and ROM wrappers,
+          interconnect logic, and cache components.
+        </p>
+
+        <span class="tag">AXI4</span>
+        <span class="tag">Cache</span>
+        <span class="tag">RTL</span>
+      </div>
+
+      <div class="card">
+        <h3>Hardware Rasterizer SoC</h3>
+
+        <p>
+          An ongoing SoC project integrating
+          a tile-based graphics rasterization
+          accelerator with a processor system.
+        </p>
+
+        <span class="tag">SoC</span>
+        <span class="tag">AXI</span>
+        <span class="tag">In Progress</span>
+      </div>
+
+      <div class="card">
+        <h3>Formal Verification</h3>
+
+        <p>
+          Applied formal verification techniques
+          and protocol verification tools to
+          validate hardware interfaces and debug
+          RTL design issues.
+        </p>
+
+        <span class="tag">JasperGold</span>
+        <span class="tag">Verification</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <h2>Technical Skills</h2>
+
+    <div class="skills">
+
+      <div class="skill-box">
+        <h3>Hardware Design</h3>
+        <p>
+          SystemVerilog, Verilog, RISC-V,
+          Pipeline Design, AXI4, Cache
+        </p>
+      </div>
+
+      <div class="skill-box">
+        <h3>Verification</h3>
+        <p>
+          RTL Simulation, Waveform Debugging,
+          Formal Verification
+        </p>
+      </div>
+
+      <div class="skill-box">
+        <h3>EDA Tools</h3>
+        <p>
+          VCS, Verdi, JasperGold,
+          Icarus Verilog, GTKWave
+        </p>
+      </div>
+
+      <div class="skill-box">
+        <h3>Development Tools</h3>
+        <p>
+          Python, Git, Linux, VS Code
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact</h2>
+
+    <p>
+      Interested in discussing digital IC design,
+      RTL development, or SoC engineering?
+    </p>
+
+    <p>
+      GitHub:
+      <a href="https://github.com/LSY2002-lab">
+        github.com/LSY2002-lab
+      </a>
+    </p>
+  </section>
+
+  <footer>
+    © 2026 LSY. All rights reserved.
+  </footer>
+
+</body>
+</html>
